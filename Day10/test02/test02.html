@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제2</title>
+</head>
+<body>
+    <script>
+        // 01
+        for (let i = 0; i < 5; i++) {
+            // alert();
+        }
+
+        // 02
+        var array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+        let sum = 0;
+        for (index in array) {
+            sum += array[index];
+        }
+        console.log(sum);
+
+        // 03
+        var goods = {"name": "육개장", "price": 1300, "expirationDate" :"2021/07/04"};
+        var keys = Object.keys(goods);
+        console.log("제품 : " + goods[keys[0]] + " 가격 : " + goods[keys[1]] + " 유통기한 : " + goods[keys[2]]);
+
+        // 04
+        var restaurantList = [
+            {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
+            {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
+            {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+            {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+            {"name":"쿠이", "menu":"양식", "location":"부산"},
+            {"name":"하남돼지집", "menu" :"고기", "location":"성남시 분당구"}
+        ];
+
+        for (restaurant in restaurantList) {
+            let place = restaurantList[restaurant];
+            if (place.menu != "고기") {
+                console.log("상호명: " + place.name + " 위치: " + place.location);
+            }
+        }
+
+    </script>
+</body>
+</html>

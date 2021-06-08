@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string = "Hello World";
+        var number = 100;
+        // alert(number);
+        if (number == 10) {
+            var a = 10; //전역변수
+            let b = 30; //지역변수
+        }
+
+        console.log(a);
+
+        if (string == "Hello Woorld") {
+            console.log(string);
+        }
+
+        let strNumber = "10";
+        number = 10;
+
+        if (strNumber == number) {
+            console.log("같다!");
+        } else {
+            console.log("다르다!");
+        }
+
+        // 타입까지 비교
+        if (strNumber === number) {
+            console.log("같다!");
+        } else {
+            console.log("다르다!");
+        }
+
+        var empty;
+        console.log(empty);
+
+        if (empty == undefined) {
+            console.log("초기화 안함");
+        }
+
+        var nullVar = null;
+
+        if (empty === nullVar) {
+            console.log("같다??");
+        } else {
+            console.log("다르다");
+        }
+     </script>
+</body>
+</html>

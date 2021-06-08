@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열</title>
+</head>
+<body>
+    <script>
+        var text = "I must do what I want to do";
+        // 문자열 길이
+        console.log(text.length);
+
+        // 문자 꺼내기
+        console.log(text.charAt(5));
+
+        // 문자열과 문자를 구분하지 않는다.
+        var string1 = "asdf";
+        var string2 = 'asdf';
+
+        // 특정 문자가 어디에 있는지 위치 찾기
+        console.log(text.indexOf('t'));
+        console.log(text.indexOf('must'));
+        console.log(text.indexOf('and'));
+
+        // 특정 문자열이 포함되어 있는지?
+        console.log(text.includes("what"));
+        console.log(text.includes("and"));
+
+        // 문자열 바꾸기
+        var replaceString = text.replace("I", "You");
+        console.log(replaceString);
+
+        // 모두 바꾸기
+        // 정규 표현식!!
+        // Regular expression
+        console.log(text.replace(/I/g, "You"));
+
+    </script>    
+</body>
+</html>
