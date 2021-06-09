@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jQuery homework 01</title>
+    <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+    <style>
+        #box-01 { width: 100px; height: 100px; background: cadetblue }
+        /* .slide-wrap { display: flex; align-items: flex-end; }
+        .img-box { width: 200px; height: 200px; background: #ddd;} */
+        .slide-image { width: 200px; }  
+    </style>
 </head>
 <body>
-    
+    <h3>1. 비밀번호 일치</h3>
+    비밀번호 : <input type="text" id="password-01">
+    비밀번호 확인 : <input type="text" id="confirm-01">
+    <button type="button" id="btn-01">확인</button>
+    <hr>
+    <h3>2. 금칙어</h3>
+    <input type="text" id="input-01">
+    <button type="button" id="btn-02">검색</button>
+    <hr>
+    <h3>3. 더보기</h3>
+    <button type="button" id="btn-03">펼치기</button>
+    <div id="more"></div>
+    <hr>
+    <h3>4. 사각형 바꾸기</h3>
+    <div class="box" id="box-01"></div>
+    <button type="button" id="btn-04">교체</button>
+    <hr>
+    <h3>5. 이미지 교체</h3>
+    <div class="slide-wrap">
+        <button type="button" id="prev">이전</button>
+        <img class="slide-image" src="image01.jpeg" alt="슬라이더 이미지입니다.">
+        <button type="button" id="next">다음</button>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // 01 비밀번호 일치
+            $("#btn-01").on("click", function() {
+                if ($("#password-01").val().length < 1) {
+                    alert("비밀번호를 입력해주세요.");
+                } else if ($("#password-01").val() == $("#confirm-01").val()) {
+                    alert("확인 완료");
+                } else {
+                    alert("비밀번호가 일치하지 않습니다.");
+                }
+            });
+
+            // 02 금칙어 확인
+            var bannedWords = ["십장생", "시베리아", "조카신발", "쌍쌍바", "십원짜리"];
+            $("#btn-02").on("click", function() {
+                for (var word of bannedWords) {
+                    // console.log(word);
+                    if (($("#input-01").val().trim().includes(word))) {
+                        alert("금칙어가 포함되어 있습니다. 검색할 수 없습니다.");
+                    }
+                }
+            });
+
+            // 03 더보기
+            $("#btn-03").on("click", function() {
+                if ($("#more").text() == "") {
+                    $("#more").text("추가 설명입니다. 블라블라");
+                    $(this).text("닫기");
+                } else {
+                    $("#more").text("");
+                    $(this).text("펼치기");
+                }
+            });
+
+            // 04 사각형 바꾸기
+            $("#btn-04").on("click", function() {
+                if ($("#box-01").width() < 200) {
+                    $("#box-01").css({"width":"500px", "height":"500px", "background":"skyblue"});
+                } else {
+                    $("#box-01").css({"width":"100px", "height":"100px", "background":"cadetblue"});
+                }
+            });
+            
+            // 05 이미지 교체
+            let index = 1;
+            $(".slide-image").attr("src", `./image0${index}.jpeg`);
+            $("#next").on("click", function() {
+                $(".slide-image").attr("src", `./image0${++index}.jpeg`);
+                if (index >= 3) {
+                    index = 0;
+                }
+            });
+            $("#prev").on("click", function() {
+                if (index <= 1) {
+                    index = 4;
+                }
+                $(".slide-image").attr("src", `./image0${--index}.jpeg`);
+            });
+        });
+
+    </script>   
 </body>
 </html>
