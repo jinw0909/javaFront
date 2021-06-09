@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree</title>
+</head>
+<body>
+    <h1 class="class-h1">Hello World</h1>
+    <div class="class-div" id="contents">
+        <p class="class-p" id="p1" name="p_name">내 이름은 장진우이다.</p>
+        <p class="class-p" id="p2" name="p_name">내 이름은 오바마이다.</p>
+    </div>
+    
+    <script>
+        // id로 node 가져오기
+        let p1 = document.getElementById("p1");
+        console.log(p1);
+        p1.innerText = "내 별명은 뭐다?";
+
+        // class로 node 가져오기
+        let pClass = document.getElementsByClassName("class-p");
+        pClass[1].innerText = 'asdf';
+
+        // tag로 node 가져오기
+        let divTags = document.getElementsByTagName("div");
+        // divTags[0].innerText = "와장창";
+
+        // name으로 node 가져오기
+        let pName = document.getElementsByName("p_name");
+        pName[0].innerText = "가나다";
+    </script>
+</body>
+</html>

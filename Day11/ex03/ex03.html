@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .box { width: 100px; height: 100px; background-color: cadetblue; }
+    </style>
+</head>
+<body>
+    텍스트 : <input type="text" id="text">
+    <button type="button" id="confirmBtn">확인</button><br>
+    복사한 텍스트 : <input type="text" id="copyText"><br>
+
+    <hr>
+
+    <div id="box1" class="box"></div>
+    <button type="button" id="divBtn">클릭하면 박스에 글자가 들어갑니다.</button>
+    <a href="#none" class="link">박스 On/Off</a>
+
+    <script>
+        // dom tree가 완료 되었는지 확인
+        $(document).ready(function() {  // 익명 함수
+            // 버튼 클릭 이벤트
+            $('#confirmBtn').on("click", function() {
+                // alert("버튼클릭");
+                let text = $("#text").val();
+                text = text.trim();
+                alert(text);
+
+                // 유효성 검사 (validation)
+                if (text.length < 1) {
+                    alert("텍스트를 채워 주세요");
+                    return; // validation 은 일반적으로 아래 return (아래 코드가 수행되면 안되는 경우가 많기 때문)
+                }
+
+                // 다른 인풋에 값 넣기
+                $('#copyText').val(text);
+            });
+
+            // div 버튼 클릭 이벤트
+            $("#divBtn").on("click", function() {
+                $("#box1").text("아무말이나 막해보자");
+            });
+
+            // a 태그 클릭 이벤트
+            $(".link").on("click", function() {
+                // if($("#box1").is(":visible")) {
+                //     $("#box1").hide();
+                // } else {
+                //     $("#box1").show();
+                // }
+
+
+                // css 활용
+                if ($("box1").css("display") == "none")) {
+                    $("#box1").css("display", "block");
+                } else {
+                    $("#box1").css("display", "none");
+                }    
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text = "I must do what I want to do";
+
+        // 길이 구하기
+        console.log(text);
+
+        // n번째 문자
+        console.log(text.charAt(5));
+
+        // 특정 문자열의 위치
+        console.log(text.indexOf("t"));
+        console.log(text.indexOf("what"));
+
+        // 특정 문자열이 포함되어 있는지
+        console.log(text.includes("must"));
+        console.log(text.includes("can"));
+
+        // 문자열 변경
+        console.log(text.replace("I", "You"));
+        console.log(text.replace(/I/g, "You"));
+
+        // 문자열 자르기
+        console.log(text.slice(2, 6));
+
+        // 문자열 쪼개기
+        var words = text.split(" ");
+        console.log(words); // 배열 반환
+
+        // 공백 제거 > 문자열 앞과 뒤에 있는 무의미한 공백 제거
+        let user = "       jinw0909";
+        console.log(user);
+        console.log(user.trim());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제03</title>
+</head>
+<body>
+    <script>
+        // 01
+        var userid = "my_id_very_simple";
+        let alertId = userid.slice(0, 8);
+        if (userid.length > 8) {
+            // alert("id는 8자를 넘길 수 없습니다. " + alertId);
+        }
+        
+        // 02 
+        var path = "/Users/master/Document/image/city.jpg";
+        const pathArray = path.split("/");
+        console.log(pathArray[pathArray.length - 1]);
+
+        // 03
+        var info = {
+            "name":"김 인규",
+            "phoneNumber":"01012345678",
+            "introduce":"    안녕하세요. 저는 기분이 좋네요.  "
+        };
+        for (key in info) {
+            console.log(key);
+        }
+        console.log("이름 : " + info.name.replace(" ", "") + " 전화번호 : " + info["phoneNumber"].slice(0, 3) + "-" + info.phoneNumber.slice(3, 7) + "-" + info.phoneNumber.slice(7, 11) +" 소개 : " + info.introduce.trim());
+
+        // 04
+        var membersString = "루피:19931005,조로:19890513,나미:19970705,쵸파:20040932";
+        let memberList = []
+        let dic = {};
+        const member = membersString.split(",");
+        for (let value of member) {
+            let array = value.split(":");
+            console.log(array[0]);
+            console.log(array[1]);
+            // dic.name = array[0];
+            // dic.birth = array[1];
+            // dic["name"] = array[0];
+            // dic["birth"] = array[1];
+            let dic = {"name":array[0], "birth":array[1]};
+            memberList.push(dic);
+        }
+        console.log(memberList);
+
+        // 05
+
+
+
+
+
+
+    </script>
+</body>
+</html>
