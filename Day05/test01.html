@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV 연습문제</title>
+    <style>
+        .flex-wrap {
+            width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .box-01 { background: red; }
+        .box-02 { background: green; }
+        .box-03 { background: blue; }
+        .box-04 { background: yellow; }
+        .flex-wrap2 {
+            margin-top: 20px;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+        }
+        .flex-wrap3 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-wrap">
+        <div class="box-01 box"></div>
+        <div class="box-02 box"></div>
+        <div class="box-03 box"></div>
+        <div class="box-04 box"></div>
+    </div>
+    <div class="flex-wrap2">
+        <div class="box-01 box2"></div>
+        <div class="box-02 box2"></div>
+        <div class="box-03 box2"></div>
+        <div class="box-04 box2"></div>
+    </div>
+    <div class="flex-wrap3">
+        <div class="box-01 box3"></div>
+        <div class="box-02 box3"></div>
+        <div class="box-03 box3"></div>
+        <div class="box-04 box3"></div>
+    </div>
+</body>
+</html>

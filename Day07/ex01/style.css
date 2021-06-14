@@ -1,0 +1,39 @@
+#wrap {
+    height: 900px;
+}
+header {
+    height: 100px;
+}
+nav {
+    height: 50px;
+}
+.logo {
+    font-size: 36px;
+}
+.main-link {
+    color: black;
+    font-weight: bold;
+}
+.main-link:hover {
+    color: gray;
+}
+section {
+    height: 400px;
+}
+.image-size {
+    width: 170px;
+    height: 115px;
+}
+section > .aside > .login-box {
+    height: 150px;
+}
+section > .aside > .ad {
+    height: 250px;
+}
+.ad-image-size {
+    width: 300px;
+    height: 200px;
+}
+footer {
+    height: 80px;
+}

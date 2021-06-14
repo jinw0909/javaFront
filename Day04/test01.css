@@ -1,0 +1,35 @@
+#calander {
+    border-collapse: collapse;
+}
+th {
+   border: 1px solid #000;
+}
+td {
+    border: 1px solid #000;
+    vertical-align: top;
+    padding: 10px;
+}
+#year {
+    font-size: 15px;
+    font-weight: bold;
+}
+#month {
+    font-size: 50px;
+    font-weight: bold;
+}
+td {
+    width: 150px;
+    height: 100px;
+}
+.sunday {
+    color: red;
+}
+.holiday {
+    color: red;
+}
+#today {
+    background: beige;
+}
+td:hover {
+    background: skyblue;
+}

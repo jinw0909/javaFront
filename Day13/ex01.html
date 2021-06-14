@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 두번째</title>
+    <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+    좋아하는 동물을 고르세요
+    <label><input type="radio" name="animal" value="dog" checked>개</label>
+    <label><input type="radio" name="animal" id="cat" value="cat">고양이</label>
+    <label><input type="radio" name="animal" value="lion">사자</label>
+    <button type="button" id="checkCat">고양이를 선택하는 버튼</button>
+    <button id="cancelBtn">모든 선택 제거</button>
+
+    <hr>
+    <!-- 셀렉트 이벤트 -->
+    주소 이동 : 
+    <select name="" id="siteSelect">
+        <option value="naver">네이버</option>
+        <option value="daum">다음</option>
+        <option value="google">구글</option>
+    </select>
+
+    <script>
+        $(document).ready(function() {
+            // 라디오버튼이 선택되었을 때 처리하는 이벤트
+            $("input[name=animal").on("change", function() {
+                var value = $("input[name='animal']:checked").val();
+                alert(value);
+            });
+
+            // checked, selected
+            $("#checkCat").on("click", function() {
+                $("#cat").prop("checked", true);
+            });
+
+            $("#cancelBtn").on("click", function() {
+                $("input[name='animal']").prop("checked", false);
+            });
+
+            $("#siteSelect").on("change", function() {
+                var selectVal = $("#siteSelect option:selected").val();
+                if (selectVal == "naver") {
+                    // 주소 이동
+                    location.href = "https://naver.com";
+                } else if (selectVal == "daum") {
+                    location.href = "https://daum.net";
+                } else if (selectVal == "google") {
+                    location.href = "https://google.com";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

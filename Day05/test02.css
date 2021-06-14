@@ -1,0 +1,25 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+header {
+    height: 100px;
+    background-color: azure;
+    display: flex;
+}
+.logo {
+    background: brown;
+    width: 200px;
+}
+nav {
+    background: yellowgreen;
+    flex: 1;
+}
+section {
+    height: 500px;
+    background: #efefef;
+}
+footer {
+    height: 100px;
+    background: brown;
+}

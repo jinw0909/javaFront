@@ -1,0 +1,41 @@
+#wrap {
+}
+header {
+    height: 100px;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.main-link {
+    color: black;
+    font-weight: bold;
+}
+section {
+    height: 500px;
+}
+.content-left {
+    overflow: hidden;
+}
+.image-size {
+    height: 100%;
+}
+.article1-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.article1-logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.article2-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+footer {
+    height: 100px;
+}
+.footer-logo {
+    font-size: 32px;
+    font-weight: bold;
+}

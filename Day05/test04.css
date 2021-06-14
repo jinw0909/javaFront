@@ -1,0 +1,53 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+header {
+    display: flex;
+    height: 100px;
+}
+.logo {
+    width: 20%;
+    background: burlywood;
+}
+.menu {
+    flex: 1;
+    background: chocolate;
+}
+.main {
+    height: 400px;
+    display: flex;
+}
+.section-left {
+    width: 50%;
+    background-color: gold;
+}
+.section-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.article-1 {
+    flex-basis: 50%;
+    background-color: indianred;
+}
+.article-2 {
+    flex: 1;
+    background-color: lightcoral;
+}
+footer {
+    height: 80px;
+    display: flex;
+}
+.footer-logo {
+    width: 15%;
+    background-color: lightskyblue;
+}
+.copyright {
+    flex: 1;
+    background-color: plum;
+}
+.footer-logo-2 {
+    width: 15%;
+    background-color: lightsteelblue;
+}

@@ -1,0 +1,42 @@
+#wrap { 
+    width: 1200px;
+    margin: auto;
+    background: burlywood;    
+}
+header {
+    height: 100px;
+    background: darkred;
+}
+nav {
+    height: 50px;
+    background: blueviolet;
+}
+.contents {
+    height: 500px;
+    background: coral;
+}
+.flex-row {
+    display: flex;
+}
+.content1 {
+    width: 800px;
+    height: 500px;
+    background: gray;
+}
+.contents > .content1 > .article1 {
+    height: 50%;
+    background: darkmagenta;    
+}
+.contents > .content1 > .article2 {
+    height: 50%;
+    background: blue;    
+}
+aside {
+    width: 400px;
+    height: 500px;
+    background: hotpink;
+}
+footer {
+    height: 100px;
+    background: darkred;
+}

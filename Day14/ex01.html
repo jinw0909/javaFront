@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+
+</head>
+<body>
+
+    날짜 선택 : <input type="text" id="datepicker"><br>
+
+    날짜 선택(이벤트) : <input type="text" id="datepickerEvent">
+    <script>
+        $(document).ready(function() {
+            $("#datepicker").datepicker();
+        
+            $("#datepickerEvent").datepicker({
+                dateFormat: "yy/mm/dd",
+                beforeShow: function(input) {
+                    alert("데이트 피커가 열렸다!!");
+                },
+
+                // 날짜가 선택되었을 때 호출 이벤트
+                onSelect: function(dateText) {
+                    alert(dateText);
+                },
+                
+                //닫힐 때 이벤트
+                onClose: function(dateText) {
+                    alert("닫혔다!!" + dateText);
+                },
+
+                
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

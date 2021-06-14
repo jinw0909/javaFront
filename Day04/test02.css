@@ -1,0 +1,30 @@
+#account-book {
+    text-align: center;
+}
+thead {
+    background: #55b8cf;
+}
+th,
+td {
+    width: 200px;
+    height: 30px;
+}
+#total {
+    background: #84d1e3;
+}
+#total-amount {
+    text-align: right;
+}
+input {
+    height: 30px;
+    width: 150px;
+}
+button {
+    width: 817px;
+    height: 30px;
+    padding: 5px;
+}
+
+tbody tr:hover {
+    background: #ddd;
+}

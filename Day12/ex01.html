@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // DOM tree가 완성되었을 때 불리는 이벤트
+        $(document).ready(function() {
+            $("#button").on("click", function() {
+                let text = $('#text').val();
+                alert(text);
+            });
+            
+            $("#divChange").on("click", function() {
+                
+            });
+        });        
+    </script>
+</body>
+</html>

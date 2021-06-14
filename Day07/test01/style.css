@@ -1,0 +1,17 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+header {
+    height: 100px;
+}
+.logo,
+.menu {
+    padding: 0;
+}
+section {
+    height: 500px;
+}
+footer {
+    height: 80px;
+}

@@ -1,0 +1,44 @@
+#wrap {
+    margin: auto;
+    max-width: 1200px;
+}
+header {
+    height: 150px;
+    background: aquamarine;
+}
+nav {
+    height: 50px;
+    background-color: darkkhaki;
+}
+.flex-row {
+    display : flex;
+}
+.div-center {
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    height: 500px;
+    background-color: darkslategray;
+    width: 700px;
+}
+.aside {
+    width: 300px;
+    height: 500px;
+    background-color: lightblue;
+}
+.article-content {
+    flex-grow: 7;
+    height: 500px;
+}
+.article {
+    max-width: 700px;
+    height: 200px;
+    background: blue;
+    margin-top: 20px;
+}
+footer {
+    height: 100px;
+    background-color: cadetblue;
+}

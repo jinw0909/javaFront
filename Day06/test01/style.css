@@ -1,0 +1,53 @@
+#wrap {
+    max-width: 1200px;
+    margin: auto;
+}
+header {
+    display: flex;
+    height: 100px;
+}
+.logo {
+    flex: 2;
+    background: burlywood;
+}
+.menu {
+    flex: 8;
+    background: chocolate;
+}
+.main {
+    height: 400px;
+    display: flex;
+}
+.section-left {
+    flex: 5;
+    background-color: gold;
+}
+.section-right {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+.article-1 {
+    flex: 1;
+    background-color: indianred;
+}
+.article-2 {
+    flex: 1;
+    background-color: lightcoral;
+}
+footer {
+    height: 80px;
+    display: flex;
+}
+.footer-logo {
+    flex: 1;
+    background-color: lightskyblue;
+}
+.copyright {
+    flex: 8;
+    background-color: plum;
+}
+.footer-logo-2 {
+    flex: 1;
+    background-color: lightsteelblue;
+}

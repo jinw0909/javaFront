@@ -1,0 +1,27 @@
+#userId {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
+.password {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#table {
+    width: 500px;
+    height: 200px;
+}
+
+th {
+    background-color: coral;
+    color: white;
+}
+tr {
+    text-align: center;
+    background-color: antiquewhite;
+}
+tr:hover {
+    background: burlywood;
+}

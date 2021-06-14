@@ -1,0 +1,36 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+    background: #ddd;
+}
+header {
+    height: 100px;
+    background: #222;
+}
+.contents {
+    height: 500px;
+    display: flex;
+}
+.content1 {
+    background: #555;
+    width: 70%;
+}
+.aside {
+    background: #777;
+    width: 30%;
+}
+footer {
+    height: 100px;
+    display: flex;
+}
+.footer-left {
+    width: 15%;
+    background: #000;
+}
+.footer-center {
+    flex: 1;
+}
+.footer-right {
+    width: 15%;
+    background: #000;
+} 

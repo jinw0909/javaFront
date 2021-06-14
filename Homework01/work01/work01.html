@@ -10,6 +10,9 @@
         #box-01 { width: 100px; height: 100px; background: cadetblue }
         /* .slide-wrap { display: flex; align-items: flex-end; }
         .img-box { width: 200px; height: 200px; background: #ddd;} */
+        #box-01.big {
+
+        }
         .slide-image { width: 200px; }  
     </style>
 </head>
@@ -25,7 +28,7 @@
     <hr>
     <h3>3. 더보기</h3>
     <button type="button" id="btn-03">펼치기</button>
-    <div id="more"></div>
+    <div class="moreDiv">추가 설명입니다.</div>
     <hr>
     <h3>4. 사각형 바꾸기</h3>
     <div class="box" id="box-01"></div>
@@ -37,6 +40,8 @@
         <img class="slide-image" src="image01.jpeg" alt="슬라이더 이미지입니다.">
         <button type="button" id="next">다음</button>
     </div>
+
+
 
 
     <script>
@@ -55,22 +60,28 @@
             // 02 금칙어 확인
             var bannedWords = ["십장생", "시베리아", "조카신발", "쌍쌍바", "십원짜리"];
             $("#btn-02").on("click", function() {
-                for (var word of bannedWords) {
+                for (let word of bannedWords) {
                     // console.log(word);
                     if (($("#input-01").val().trim().includes(word))) {
                         alert("금칙어가 포함되어 있습니다. 검색할 수 없습니다.");
+                        return;
                     }
                 }
             });
 
             // 03 더보기
             $("#btn-03").on("click", function() {
-                if ($("#more").text() == "") {
-                    $("#more").text("추가 설명입니다. 블라블라");
-                    $(this).text("닫기");
-                } else {
-                    $("#more").text("");
-                    $(this).text("펼치기");
+                // if ($("#more").text() == "") {
+                //     $("#more").text("추가 설명입니다. 블라블라");
+                //     $(this).text("닫기");
+                // } else {
+                //     $("#more").text("");
+                //     $(this).text("펼치기");
+                // }
+                if ($(".moreDiv").css("display") == "none") {
+                    $(".moreDiv").css("display", "block");
+                } else if ($(".moreDiv").css("display") == "block") {
+                    $(".moreDiv").css("display", "none");
                 }
             });
 
@@ -84,20 +95,40 @@
             });
             
             // 05 이미지 교체
-            let index = 1;
-            $(".slide-image").attr("src", `./image0${index}.jpeg`);
+            // let index = 1;
+            // $(".slide-image").attr("src", `./image0${index}.jpeg`);
+            // $("#next").on("click", function() {
+            //     $(".slide-image").attr("src", `./image0${++index}.jpeg`);
+            //     if (index >= 3) {
+            //         index = 0;
+            //     };
+            // });
+            // $("#prev").on("click", function() {
+            //     if (index <= 1) {
+            //         index = 4;
+            //     };
+            //     $(".slide-image").attr("src", `./image0${--index}.jpeg`);
+            // });
+
+            var imageList = ["image01.jpeg", "image02.jpeg", "image03.jpeg"];
+            var index = 0;
+            $("#prev").on("click", function() {
+                index-- ;
+                if (index < 0) {
+                    index = imageList.length - 1
+                }
+                let imagePath = imageList[index];
+                $(".slide-image").attr("src", imagePath);
+            });
             $("#next").on("click", function() {
-                $(".slide-image").attr("src", `./image0${++index}.jpeg`);
-                if (index >= 3) {
+                index++;
+                if (index == imageList.length) {
                     index = 0;
                 }
+                let imagePath = imageList[index];
+                $(".slide-image").attr("src", imagePath);
             });
-            $("#prev").on("click", function() {
-                if (index <= 1) {
-                    index = 4;
-                }
-                $(".slide-image").attr("src", `./image0${--index}.jpeg`);
-            });
+
         });
 
     </script>   

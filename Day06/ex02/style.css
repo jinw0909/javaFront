@@ -1,0 +1,21 @@
+#wrap {
+    height: 900px;
+}
+header {
+    height: 100px;
+}
+nav {
+    height: 50px;
+}
+section {
+    height: 500px;
+}
+section > .content {
+    height: 500px;
+}
+section > .aside {
+    height: 500px;
+}
+footer {
+    height: 80px;
+}

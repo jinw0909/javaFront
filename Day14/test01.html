@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datepicker 활용</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    
+    <style>
+        .wrapper {
+            width: 500px;
+            margin: auto;
+            margin-top: 64px;
+        }
+        
+        .title {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        input {
+            height: 1.5em;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background: #14A2B8;
+            color: #fff;
+            border: 0;
+            outline: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>행사 일정 입력</h1>
+        <div class="title">
+            <p>행사 제목</p>   
+            <input type="text" id="event-title">
+        </div>
+        <div class="content">
+            <div>시작 일 : <input type="text" id="beginDate"></div>  
+            <div>종료 일 : <input type="text" id="endDate"></div>
+        </div>
+        <button type="button">저장</button>  
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            $.datepicker.setDefaults({
+                dateFormat: 'yy/mm/dd',
+                prevText: '이전 달',
+                nextText: '다음 달',
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            });
+
+            $('#beginDate').datepicker({
+                showButtonPanel: true,
+                minDate: 0,
+                onSelect: function(){
+                    $("#endDate").datepicker("option", "minDate", $("#beginDate").datepicker("getDate"));
+                    $("#endDate").datepicker("option", "disabled", false);
+                },
+                currentText: '오늘',
+            });
+            $('#endDate').datepicker({
+                showButtonPanel: true,
+                // beforeShow: $(this).find(".ui-datepicker-close").hide(),
+                disabled: true,
+            });
+
+            $.datepicker._gotoToday = function(id) { 
+                $(id).datepicker('setDate', new Date()); 
+            };
+
+        });
+    </script>
+</body>
+</html>
